@@ -25,11 +25,9 @@ function flow(rules, jsonData, log = defaultLogger) {
 
   function evaluateRule(rule, previousRuleId) {
     const result = rule.execute(data);
-    console.error(result);
     const nextRuleId = result ? rule.true_id : rule.false_id;
 
     if (previousRuleId === nextRuleId) {
-      console.error(previousRuleId, nextRuleId);
       log.info('Circular flow detected. Ending here.');
       return;
     }
