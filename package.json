@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "test": "node flow-engine.spec.js | faucet"
+  },
+  "dependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.8.0"
+  }
+}
